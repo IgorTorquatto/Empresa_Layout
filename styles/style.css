@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/*variáveis*/
+:root {
+    --main-color: #040714;
+    --site-color: #ffffff;
+    --active-color: #0063e5;
+    --first-color: #08132f;
+    --second-color: #090b13;
+}
+
+body {
+    background-color: var(--main-color);
+    /*cor do site*/
+    color: var(--site-color);
+    /*cor do texto*/
+    font-family: "Poppins", sans-serif;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 10px;
+    margin: auto;
+}
+
+.navbar .logo a {
+    color: var(--active-color);
+    font-size: 35px;
+    width: 500;
+}
+
+.navbar .max-width {
+    display: flex;
+    /*coloca todos os 3 itens de max width em uma mesma linha*/
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .menu{
+    display: flex;
+}
+
+.navbar .menu li {
+    display: block;
+}
+
+.navbar .menu a {
+    color: var(--site-color);
+    /*coloca os itens que estão dentro da tag li ( na tag a ) como a cor predefinida*/
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 25px;
+}
+
+.menu-btn {
+    color: var(--site-color);
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 947px) {
+    .menu-btn {
+        display: block;
+        /*apresenta icone de menu*/
+        z-index: 999;
+    }
+
+    .navbar .menu {
+        background-color: var(--main-color);
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        padding-top: 80px;
+        display: block;
+    }
+
+    #menu-site.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 13px 0;
+        font-size: 25px;
+    }
+}

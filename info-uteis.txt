@@ -1,0 +1,2 @@
+icones ( fontawesome ) usar via CDN
+fontes ( google fonts ) 
